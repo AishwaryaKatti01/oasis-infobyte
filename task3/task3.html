@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPARATURE CALCULATOR</title>
+</head>
+<style>
+    .container {
+        width: 600px;
+        height: 400px;
+        display: flex;
+        margin: 100px auto auto;
+        background-color: rgb(175, 228, 210);
+        box-sizing: border-box;
+        box-shadow: 20px 20px #b9cbc5;
+    }
+    section{
+        width: 600px;
+        height: 30px;
+        margin: 0 auto;
+    }
+    .temphead {
+        margin: 33px auto 25px 112px;
+        display: inline-block;
+        text-decoration: underline black;
+        height: 20px;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .logo{
+        height: 20px;
+    }
+    .logo img {
+        width: 42px;
+        height: 46px;
+        background: transparent;
+        margin: 20px;
+        display: inline-block;
+        border-radius: 9px;
+    }
+    .values{
+        width: 800px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 108px;
+    margin-left: 59px;
+    padding: 2%;
+    text-align: right;
+
+    }
+    .values h5{
+        display: inline-block;
+    }
+    input{
+        width: 300px;
+        height: 20px;
+        text-align: justify;
+    }
+    button{
+        background-color: beige;
+        border: none;
+        border-radius: 6px;
+        height: 20px;
+        width: 60px;
+    }
+    button a{
+        text-decoration: none;
+        color: black;
+    }
+    button a:hover{
+        background-color: white;
+    }
+</style>
+
+<body>
+    <section>
+    <div class="container">
+        <div class="logo">
+            <img
+                src="data:image/png;base64,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">
+        </div>
+        <div class="temphead">TEMPARATURE CONVERTER</div></section>
+        <div class="values">
+            <h5>TEMPARATURE:</h5>
+            <input type="number" id="celsius" name="temparature" placeholder="enter the temparature">
+            <br>
+            <h5>FAHRENHEIT:</h5>
+            <input type="text" id="fahrenheit" name="fahrenheit" placeholder="fahrenheit">
+            <br>
+            <h5>KELVI:</h5>
+            <input type="text" id="kelvin" name="kelvin" placeholder="kelvin">
+            <br>
+            <br>
+            <button class="button" id="clear">Clear</button>
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const celsiusInput = document.getElementById("celsius");
+    const fahrenheitInput = document.getElementById("fahrenheit");
+    const kelvinInput = document.getElementById("kelvin");
+    const clearButton = document.getElementById("clear");
+
+    function roundNumber(num) {
+        return Math.round(num * 100) / 100;
+    }
+
+    function celsiusToOthers() {
+        let celsius = parseFloat(celsiusInput.value);
+        if (!isNaN(celsius)) {
+            fahrenheitInput.value = roundNumber((celsius * 9/5) + 32);
+            kelvinInput.value = roundNumber(celsius + 273.15);
+        } else {
+            fahrenheitInput.value = "";
+            kelvinInput.value = "";
+        }
+    }
+
+    function fahrenheitToOthers() {
+        let fahrenheit = parseFloat(fahrenheitInput.value);
+        if (!isNaN(fahrenheit)) {
+            celsiusInput.value = roundNumber((fahrenheit - 32) * 5/9);
+            kelvinInput.value = roundNumber((fahrenheit - 32) * 5/9 + 273.15);
+        } else {
+            celsiusInput.value = "";
+            kelvinInput.value = "";
+        }
+    }
+
+    function kelvinToOthers() {
+        let kelvin = parseFloat(kelvinInput.value);
+        if (!isNaN(kelvin)) {
+            celsiusInput.value = roundNumber(kelvin - 273.15);
+            fahrenheitInput.value = roundNumber((kelvin - 273.15) * 9/5 + 32);
+        } else {
+            celsiusInput.value = "";
+            fahrenheitInput.value = "";
+        }
+    }
+
+    function clearFields() {
+        celsiusInput.value = "";
+        fahrenheitInput.value = "";
+        kelvinInput.value = "";
+    }
+
+    celsiusInput.addEventListener("input", celsiusToOthers);
+    fahrenheitInput.addEventListener("input", fahrenheitToOthers);
+    kelvinInput.addEventListener("input", kelvinToOthers);
+    clearButton.addEventListener("click", clearFields);
+});
+
+    </script>
+</body>
+</html>
