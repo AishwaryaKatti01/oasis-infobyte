@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+nav{
+    padding: 1%;
+    height: 500px;
+    width:1000px;
+    background-image: url('https://xv.imgix.net/photos/xv/your-vpn-for-blank-2-11ee5f12dd68fa829ac590626b19385b.png?auto=format%2Ccompress&cs=srgb&fit=max&w=570&q=60&s=5c5e1fbe11ce2bbe03444f14a93ec7d3');
+    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    background-size:cover;
+    border-radius: 5px;
+    margin-top:100px;
+    margin-left: 165px;
+}
+.logo{
+    display: inline-block;
+    width:200px;
+    margin-left: 2%;
+    text-decoration: solid;
+    color:rgb(221, 111, 111);
+    font-size: 25px;
+}
+img{
+    padding-top: 3%;
+    width:40px;
+    height: 60px;
+    display: inline-block;
+    margin-top: 2%;
+    background: transparent;
+}
+.eng{
+    display: inline-block;
+    margin-left:600px;
+    width:150px;
+}
+.b1{
+    width: 135px;
+    height: 40px;
+   margin-left:405px;
+   margin-top: 30px;
+   text-decoration: solid;
+   color:black;
+   background-color: antiquewhite;
+   border:none;
+   border-radius: 9px;
+
+}
+.section1,.section2,.section3{
+    height:400px;
+    width:1023px;
+    margin-left:165px;
+    border-radius: 9px;
+    background-color:blanchedalmond;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.section1 button,.section3 button{
+    margin-left:50px;
+    border-radius: 10px;
+    width:150px;
+    height:30px;
+    padding: 1%;
+    background-color:lightblue;
+    border:none;
+}
+.section1 img,.section3 img{
+    width:250px;
+    height: 300px;
+    margin-left: 3%;
+    border-radius: 25px 25px 25px 25px;
+    background-color:transparent;
+    display: inline-block;
+}
+.section2 img{
+    width:250px;
+    height:300px ;
+    margin-left:50px;
+    background: transparent;
+    border-radius: 25px 25px 25px 25px;
+    display:inline-block;
+}
+.section2 .text{
+    display:inline-block;
+    width: 400px;
+    font-size: 20px;
+    text-align:center;
+    margin-left:100px;
+}
+.section1 .text,.section3 .text {
+    display: inline-block;
+    width: 390px;
+    font-size: 20px;
+    text-align:left;
+    margin-right:100px; 
+}
+.last{
+    width:650px;
+    height: 400px;
+    margin-left:350px;
+    background-image: url('https://img.freepik.com/free-vector/minimal-world-map-isolated-white-background-with-shadow_1017-42608.jpg');
+}
+.last img{
+    border-radius: 15px;
+}
+.last h2{
+    text-align: center;
+    margin-top: 5%;
+}
+.last h3{
+    text-align: right;
+    margin-left:100px;
+    text-decoration: solid black;
+}
+.last a{
+    margin-left:150px;
+    margin-top:500px;
+    color: black;
+}
+body{
+    background-color:whitesmoke;
+    width:100%;
+}
